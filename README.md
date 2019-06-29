@@ -8,7 +8,7 @@ Input: Polling ID
 Output: Govenor candidates' winning rate over election period
 - Example:
 >>> Input: Polling ID = 3033
->>> Output:  <img width="443" alt="Screen Shot 2019-06-29 at 12 50 44 PM" src="https://user-images.githubusercontent.com/37491825/60387678-c6944380-9a74-11e9-860b-f51fa4308349.png">
+>>> Output:  <img width="403" alt="Winning Rate Prediction Sample" src="https://user-images.githubusercontent.com/37491825/60387815-1247ec80-9a77-11e9-91eb-498281d4de4c.png">
 
 
 Additional library
