@@ -1,8 +1,8 @@
 
 Overview
-- This project used web scraping to grab US govenor polling data from the Real Clear Politics website.
-- Data are parsed into convenient structure
-- Data are analized by boostrap resampling in the purpose of estimating the level of precision of historical polls to the outcome.
+- This project used web scraping to grab US governor polling data from the Real Clear Politics website.
+- Data are parsed into a convenient structure
+- Data are analyzed by bootstrap resampling in the purpose of estimating the level of precision of historical polls to the outcome.
 
 Input: Polling ID
 Output: Govenor candidates' winning rate over election period
@@ -15,13 +15,13 @@ Additional library
 - requests: de facto standard for making HTTP requests in Python
 - pattern3: used to parse XML
 - beatifualSoup: used to parse HTML
-- fnmatch: Unix filename pattern matching; used to find url in web text
+- fnmatch: Unix filename pattern matching; used to find URL in web text
 
 
 Analysis
-In boostrap resampling
-- Orignal data, ∑, are resampled to n new ∑* where ∑* has length B, which can be customized by users (e.g. ∑ = (x0, x1, x2, x3), then ∑* ≔ (x2, x1, x1, x3, x0) where B =5)
-- Notice, if B is small, the distribution can be biased, then we have to analized it on Cumulative Distribution Function (CDF). The variance of the distribution is proprotional to 1/N^2 with a constant bias 1/BN, where N is the length of ∑. This is why we need to ensure B is large enough so that we could ignore the bias.
+In bootstrap resampling
+- Original data, ∑, are resampled to n new ∑* where ∑* has length B, which can be customized by users (e.g. ∑ = (x0, x1, x2, x3), then ∑* ≔ (x2, x1, x1, x3, x0) where B =5)
+- Notice, if B is small, the distribution can be biased, then we have to analyze it on Cumulative Distribution Function (CDF). The variance of the distribution is proportional to 1/N^2 with a constant bias 1/BN, where N is the length of ∑. This is why we need to ensure B is large enough so that we could ignore the bias.
 Case Methodology
 - Collect all historical election data
 - Calculate normalized errors between historical data and final winning result
